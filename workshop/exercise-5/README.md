@@ -123,9 +123,13 @@ Let's leverage this feature with Istio ingress gateway:
 
 Congratulations! You extended the base Ingress features by providing a DNS entry to the Istio service.
 
-## References:
-[Kubernetes Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
-[Istio Ingress](https://istio.io/docs/tasks/traffic-management/ingress.html)
-[Bring your own ALB](https://www.ibm.com/blogs/bluemix/2019/04/bring-your-own-alb-dns-with-health-checks-and-ssl-certificates-beta/)
+---
 
-#### [Continue to Exercise 6 - Traffic Management](../exercise-6/README.md)
+### [Continue to Exercise 6 - Traffic Management](../exercise-6/README.md)
+
+---
+
+## Further Reading:
+* [Kubernetes Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
+* [Istio Ingress](https://istio.io/docs/tasks/traffic-management/ingress.html)
+* [Bring your own ALB](https://www.ibm.com/blogs/bluemix/2019/04/bring-your-own-alb-dns-with-health-checks-and-ssl-certificates-beta/)

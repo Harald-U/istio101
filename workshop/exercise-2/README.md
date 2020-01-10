@@ -76,6 +76,7 @@ Managed Istio is available as part of IBM Cloud™ Kubernetes Service. The servi
 
     Congratulations! You successfully installed Istio into your cluster.
 
+---
 
-#### [Continue to Exercise 3 - Deploy Guestbook with Istio Proxy](../exercise-3/README.md)
+### [Continue to Exercise 3 - Deploy Guestbook with Istio Proxy](../exercise-3/README.md)
 

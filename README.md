@@ -16,8 +16,12 @@ Learn how Kubernetes and Istio give you full control over your microservices. Ku
 
 - Niklas Heidloff, Thomas Südbröcker, Harald Uebele -- IBM Developer Advocates
 
+---
+
 ## License
 
 See [LICENSE](./LICENSE) for license information.
 
-[istio](https://istio.io/)
+---
+
+[Istio](https://istio.io/)

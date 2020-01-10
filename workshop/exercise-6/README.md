@@ -176,6 +176,13 @@ Istio `DestinationRules` allow users to configure Envoy's implementation of [cir
 
 Depending on whether a service handles [HTTP](https://istio.io/docs/reference/config/istio.networking.v1alpha3/#ConnectionPoolSettings.HTTPSettings) requests or [TCP](https://istio.io/docs/reference/config/istio.networking.v1alpha3/#ConnectionPoolSettings.TCPSettings) connections, `DestinationRules` expose a number of ways for Envoy to limit traffic to a particular service as well as define failure recovery behavior for services initiating the connection to an unhealthy service.
 
+
+---
+
+### [Continue to Exercise 7 - Security](../exercise-7/README.md)
+
+---
+
 ## Further reading
 * [Istio Concept](https://istio.io/docs/concepts/traffic-management/)
 * [Istio Rules API](https://istio.io/docs/reference/config/istio.networking.v1alpha3)
@@ -184,7 +191,3 @@ Depending on whether a service handles [HTTP](https://istio.io/docs/reference/co
 * [Traffic Management](https://blog.openshift.com/istio-traffic-management-diving-deeper/)
 * [Circuit Breaking](https://blog.openshift.com/microservices-patterns-envoy-part-i/)
 * [Timeouts and Retries](https://blog.openshift.com/microservices-patterns-envoy-proxy-part-ii-timeouts-retries/)
-
-
-
-#### [Continue to Exercise 7 - Security](../exercise-7/README.md)

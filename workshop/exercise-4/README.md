@@ -129,6 +129,6 @@ Kiali has a number of views to help you visualize your services. Click through t
 
 ![](../README_images/kiali.png) 
 
+---
 
-
-#### [Continue to the next Exercise](../exercise-5/README.md)
+### [Continue to the next Exercise](../exercise-5/README.md)

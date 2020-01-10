@@ -208,4 +208,6 @@ Note: You may have trouble editing this file with some browsers, particularly Ed
 
 Great! Your guestbook app is up and running. In Exercise 4, you'll be able to see the app in action by directly accessing the service endpoint. You'll also be able to view Telemetry data for the app.
 
-#### [Continue to Exercise 4 - Telemetry](../exercise-4/README.md)
+---
+
+### [Continue to Exercise 4 - Telemetry](../exercise-4/README.md)

@@ -272,12 +272,11 @@ EOF
 
 Thank you so much for your time today!  You've done an excellent job making it through the material.
 
+---
+
 ## Further Reading
 
 * [Basic TLS/SSL Terminology](https://dzone.com/articles/tlsssl-terminology-and-basics)
-
 * [TLS Handshake Explained](https://www.ibm.com/support/knowledgecenter/en/SSFKSJ_7.1.0/com.ibm.mq.doc/sy10660_.htm)
-
 * [Istio Task](https://istio.io/docs/tasks/security/mutual-tls.html)
-
 * [Istio Concept](https://istio.io/docs/concepts/security/mutual-tls.html)
