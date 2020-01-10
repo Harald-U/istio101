@@ -27,9 +27,9 @@ The service plan that you choose for an IBM Log Analysis with LogDNA instance de
 
 ![LogDNA dashboard](../README_images/observability-logging-logdna.png)
 
-{% hint style='tip' %}
+
 Find more about IBM Log Analysis with LogDNA in the [IBM Cloud documentation](https://cloud.ibm.com/docs/services/Log-Analysis-with-LogDNA/index.html#getting-started).
-{% endhint %} -->
+ -->
 
 ## Using IBM Cloud Monitoring with Sysdig
 
