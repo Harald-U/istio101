@@ -63,9 +63,9 @@ Wait 10 minutes. You just installed the Sysdig monitoring agent into the cluster
 
 ![Sysdig dashboard](../README_images/sysdig2.png)
 
-{% hint style='tip' %}
+
 Find more about IBM Cloud Monitoring with Sysdig in the [IBM Cloud documentation](https://cloud.ibm.com/docs/services/Monitoring-with-Sysdig/index.html#getting-started).
-{% endhint %}
+
 
 <!-- 4. After you've finished, DELETE the sysdig service.  You can do this from your [resources list](https://cloud.ibm.com/resources). 
 
