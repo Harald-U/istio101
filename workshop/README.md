@@ -73,5 +73,5 @@ In this section, you will login to your own IBM Cloud account, and then get acce
     ```
 
 
-### [Continue to Exercise 1](/workshop/exercise-1/README.md)
+### [Continue to Exercise 1](exercise-1/README.md)
 
