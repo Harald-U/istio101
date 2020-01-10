@@ -1,3 +1,15 @@
+
+>[Getting Started - Prepare Your Environment](../README.md)
+[Exercise 1 - Accessing your Kubernetes Cluster](../workshop/exercise-1/README.md)
+[Exercise 2 - Installing Istio](../exercise-2/README.md)
+**Exercise 3 - Deploy Guestbook with Istio Proxy**
+[Exercise 4 - Telemetry](../exercise-4/README.md)
+[Exercise 5 - Expose the service mesh with the Istio Ingress Gateway](../exercise-5/README.md)
+[Exercise 6 - Traffic Management](../exercise-6/README.md)
+[Exercise 7 - Security](../exercise-7/README.md)
+
+---
+
 # Exercise 3 - Deploy the Guestbook app with Istio Proxy
 
 The Guestbook app is a sample app for users to leave comments. It consists of a web front end, Redis master for storage, and a replicated set of Redis slaves. We will also integrate the app with Watson Tone Analyzer which detects the sentiment in users' comments and replies with emoticons.
@@ -155,9 +167,9 @@ Create Watson Tone Analyzer in your own account.
 
     > If the previous command errors, it might be due to your resource group name. Try -g Default rather than default
     
-    > See all resource groups by running `ibmcloud resource groups`. If it fails due to the region, try `au-syd` rather than `us-south`.
+    > See all resource groups by running `ibmcloud resource groups`. If it fails due to the region, try `eu-de` rather than `us-south`.
 
-1. Create the service key for the Tone Analyzer service. This command should output the credentials you just created. You will need the value for **apikey** & **url** later.
+1. Create the service key for the Tone Analyzer service. This command should output the credentials you just created. You will need the value for **apikey** & **url** later. Save them in your environment file, too!
 
     ```shell
     ibmcloud resource service-key-create tone-analyzer-key Manager --instance-name my-tone-analyzer-service
@@ -181,7 +193,8 @@ Create Watson Tone Analyzer in your own account.
 ![](../README_images/fileeditor2.png)
 
 
-1. Find the env section near the end of the file. Replace YOUR_API_KEY with the API_KEY provided earlier. YOUR_URL should be edited to be `https://gateway.watsonplatform.net/tone-analyzer/api`. If you created the service in `au-syd`, this URL should instead be: `https://gateway-syd.watsonplatform.net/tone-analyzer/api` Save the file and close the web file browser.
+1. Find the env section near the end of the file. Replace YOUR_API_KEY with the **apikey** and YOUR_URL with the **url**, both provided earlier, it looks similar to `https://api.us-south.tone-analyzer.watson.cloud.ibm.com/instances/xxx-xxx-xxx-xxx-xxx`. 
+Save the file and close the web file browser.
 
 
 Note: You may have trouble editing this file with some browsers, particularly Edge. If you're having trouble, try clicking the name of the file in the top tab, and then moving your cursor and making edits using the arrow keys and keyboard. `ctrl+c` is copy, and `ctrl+v` is paste.

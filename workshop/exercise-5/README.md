@@ -1,3 +1,15 @@
+
+>[Getting Started - Prepare Your Environment](../README.md)
+[Exercise 1 - Accessing your Kubernetes Cluster](../workshop/exercise-1/README.md)
+[Exercise 2 - Installing Istio](../exercise-2/README.md)
+[Exercise 3 - Deploy Guestbook with Istio Proxy](../exercise-3/README.md)
+[Exercise 4 - Telemetry](../exercise-4/README.md)
+**Exercise 5 - Expose the service mesh with the Istio Ingress Gateway**
+[Exercise 6 - Traffic Management](../exercise-6/README.md)
+[Exercise 7 - Security](../exercise-7/README.md)
+
+---
+
 # Exercise 5 - Expose the service mesh with the Istio Ingress Gateway
 
 The components deployed on the service mesh by default are not exposed outside the cluster. External access to individual services so far has been provided by creating an external load balancer or node port on each service.
@@ -74,6 +86,8 @@ Let's leverage this feature with Istio ingress gateway:
     Hostname                                                                             IP(s)               Health Monitor   SSL Cert Status   SSL Cert Secret Name   
     mycluster-85f044fc29ce613c264409c04a76c95d-0001.us-east.containers.appdomain.cloud   ["169.1.1.1"]   None             created           mycluster-85f044fc29ce613c264409c04a76c95d-0001   
     ```
+    
+    **Note:** This list may contain two NLB host names. The first one would be the host name of the Kubernetes ingress, so watch for the correct IP address! (`$ echo $INGRESS_IP`)
 
 1. Make note of the NLB host name (<nlb_host_name>), as it will be used to access your Guestbook app in later parts of the course. Create an environment variable for it and test using curl or visit in your browser.
 

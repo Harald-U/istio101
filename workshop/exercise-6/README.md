@@ -1,4 +1,16 @@
-# Exercise 6 - Perform traffic management
+
+>[Getting Started - Prepare Your Environment](../README.md)
+[Exercise 1 - Accessing your Kubernetes Cluster](../workshop/exercise-1/README.md)
+[Exercise 2 - Installing Istio](../exercise-2/README.md)
+[Exercise 3 - Deploy Guestbook with Istio Proxy](../exercise-3/README.md)
+[Exercise 4 - Telemetry](../exercise-4/README.md)
+[Exercise 5 - Expose the service mesh with the Istio Ingress Gateway](../exercise-5/README.md)
+**Exercise 6 - Traffic Management**
+[Exercise 7 - Security](../exercise-7/README.md)
+
+---
+
+# Exercise 6 - Traffic Management
 
 ## Using rules to manage traffic
 The core component used for traffic management in Istio is Pilot, which manages and configures all the Envoy proxy instances deployed in a particular Istio service mesh. It lets you specify what rules you want to use to route traffic between Envoy proxies, which run as sidecars to each service in the mesh. Each service consists of any number of instances running on pods, containers, VMs etc. Each service can have any number of versions (a.k.a. subsets). There can be distinct subsets of service instances running different variants of the app binary. These variants are not necessarily different API versions. They could be iterative changes to the same service, deployed in different environments (prod, staging, dev, etc.). Pilot translates high-level rules into low-level configurations and distributes this config to Envoy instances. Pilot uses three types of configuration resources to manage traffic within its service mesh: Virtual Services, Destination Rules, and Service Entries.

@@ -2,7 +2,7 @@
 
 1. Which of the following are the features provided by Istio?
 
-A. Traffic Management   B. Telemtry   C. Policy Enforcement.   D. Machine Learning.  E. Mutual TLS.  F. API Connect
+A. Traffic Management   B. Telemetry   C. Policy Enforcement   D. Machine Learning  E. Mutual TLS  F. API Connect
 
 (Answer A B C E)
 
@@ -17,7 +17,7 @@ A. Traffic Management   B. Metrics   C Distributed Tracing   D. Policy Enforceme
 (Answer C)
 
 4. Which Istio component is always required when user chooses to only install certain Istio features?
-A. Mixer  B. Pilot.  C. Citadel.  D. Istioctl
+A. Mixer  B. Pilot  C. Citadel  D. Istioctl
 
 (Answer B)
 
@@ -27,7 +27,7 @@ A. Mixer. B. Pilot C. Citadel D. Envoy side car
 (Answer D)
 
 6. Which Istio features allow user to configure per namespace?
-A. Policy enforcement B. Traffic Management C. Authentication Policy. D. Telemtry
+A. Policy enforcement B. Traffic Management C. Authentication Policy. D. Telemetry
 
 (Answer A, C, D)
 
