@@ -1,11 +1,11 @@
 
->[Getting Started - Prepare Your Environment](../README.md)
-[Exercise 1 - Accessing your Kubernetes Cluster](../workshop/exercise-1/README.md)
-[Exercise 2 - Installing Istio](../exercise-2/README.md)
-[Exercise 3 - Deploy Guestbook with Istio Proxy](../exercise-3/README.md)
-**Exercise 4 - Telemetry**
-[Exercise 5 - Expose the service mesh with the Istio Ingress Gateway](../exercise-5/README.md)
-[Exercise 6 - Traffic Management](../exercise-6/README.md)
+>[Getting Started - Prepare Your Environment](../README.md) ## 
+[Exercise 1 - Accessing your Kubernetes Cluster](../workshop/exercise-1/README.md) ## 
+[Exercise 2 - Installing Istio](../exercise-2/README.md) ## 
+[Exercise 3 - Deploy Guestbook with Istio Proxy](../exercise-3/README.md) ## 
+**Exercise 4 - Telemetry** ## 
+[Exercise 5 - Expose the service mesh with the Istio Ingress Gateway](../exercise-5/README.md) ## 
+[Exercise 6 - Traffic Management](../exercise-6/README.md) ## 
 [Exercise 7 - Security](../exercise-7/README.md)
 
 ---
