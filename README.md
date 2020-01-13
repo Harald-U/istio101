@@ -10,7 +10,7 @@ Learn how Kubernetes and Istio give you full control over your microservices. Ku
 - Time: 18:00 - 20:00 (6:00 PM to 8:00 PM)
 - Location: WeWork, Stresemannstraße 123, 10963 Berlin
 
-[Get started](workshop/README.md)
+## >> [Get started](workshop/README.md)
 
 ### Lab Instructors
 

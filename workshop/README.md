@@ -29,7 +29,7 @@ In this section, you will login to your own IBM Cloud account, and then get acce
 
 1. After the email verification, confirm by logging in to https://cloud.ibm.com.
 
-1. Go to [Grant Cluster](https://kubeforumsydney.mybluemix.net/) web page and enter your IBM ID (the email you used to sign up) and the lab key from the instructor
+1. Go to [Grant Cluster](https://.mybluemix.net/) web page and enter your IBM ID (the email you used to sign up) and the lab key from the instructor
 
     ![](README_images/get-clusters-no-region.png)
 
@@ -51,7 +51,7 @@ In this section, you will login to your own IBM Cloud account, and then get acce
 
 1. Launch the **Kubernetes Dashboard** and have a look around! You can come back to this dashboard throughout your lab.
 
-10. On your own workstation/laptop/notebook create a text file (call it 'environment.txt' if you need an idea for a name) and save the cluster name. Keep this file open throughout the lab to store other important values and parameters.
+10. On your own workstation/laptop/notebook create a text file (call it 'environment.txt' if you need an idea for a name) and save the cluster name ('export MYCLUSTER=...'). Keep this file open throughout the lab to store other important values and parameters.
 
     You can use this as a template for your own `environment.txt`:
 
