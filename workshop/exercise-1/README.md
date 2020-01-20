@@ -19,6 +19,8 @@ For this lab, a web shell is provided for you with all the necessary tools. Use 
 
 1. Using Chrome or Firefox, [**click here to launch Cloud Shell**](https://workshop.shell.cloud.ibm.com/) and `Login` with your IBM Cloud account.
 
+    If prompted for a password or passphrase, use `ikslab`.
+
 1. Using the account drop down, choose the **IBM** account.
 
    ![](../README_images/cloudshell.png)
