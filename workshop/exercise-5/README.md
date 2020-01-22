@@ -12,7 +12,7 @@
 
 # Exercise 5 - Expose the service mesh with the Istio Ingress Gateway
 
-**Note:** You will will be able to complete this exercise on the Kubernetes clusters provided to you for this workshop. You will not be able to do this on a free Kubernetes cluster on IBM Cloud since the free clusters do not have external IP adresses and Network Load Balancers (NLBs) available.
+**Note:** You will be able to complete this exercise on the Kubernetes clusters provided to you for this workshop. You will **not be able** to do this on a lite Kubernetes cluster on IBM Cloud since the free lite clusters do not have external IP adresses and Network Load Balancers (NLBs) available.
 
 The components deployed on the service mesh by default are not exposed outside the cluster. External access to individual services so far has been provided by creating an external load balancer or node port on each service.
 
@@ -54,9 +54,9 @@ NLB host names are the DNS host names you can generate for each IBM Cloud Kubern
 
 For example, you can run the IBM Cloud Kubernetes Service ALB, an API gateway of your choice, an Istio ingress gateway, and an MQTT server in parallel in your IBM Cloud Kubernetes Service cluster. Each one will have its own:
 
-    1. Publicly available wildcard host name
-    2. Wildcard SSL certificate associated with the host name
-    3. Health checks that you can configure if you use multizone deployments. 
+- Publicly available wildcard host name
+- Wildcard SSL certificate associated with the host name
+- Health checks that you can configure if you use multizone deployments. 
     
 Let's leverage this feature with Istio ingress gateway:
 

@@ -110,7 +110,7 @@ The Redis database is a service that you can use to persist the data of your app
     kubectl apply -f guestbook-deployment.yaml
     ```
 
-These commands deploy the Guestbook app on to the Kubernetes cluster. Since we enabled automation sidecar injection, these pods will be also include an Envoy sidecar as they are started in the cluster. Here we have two versions of deployments, a new version (`v2`) in the current directory, and a previous version (`v1`) in a sibling directory. They will be used in future sections to showcase the Istio traffic routing capabilities.
+    These commands deploy the Guestbook app on to the Kubernetes cluster. Since we enabled automation sidecar injection, these pods will also include an Envoy sidecar as they are started in the cluster. Here we have two versions of deployments, a new version (`v2`) in the current directory, and a previous version (`v1`) in a sibling directory. They will be used in future sections to showcase the Istio traffic routing capabilities.
 
 2. Create the guestbook service.
 
@@ -145,7 +145,7 @@ These commands deploy the Guestbook app on to the Kubernetes cluster. Since we e
 
 
 ### Use Watson Tone Analyzer
-Watson Tone Analyzer detects the tone from the words that users enter into the Guestbook app. The tone is converted to the corresponding emoticons.
+Watson Tone Analyzer detects the tone from the words that users enter into the Guestbook app (version 2). The tone is converted to the corresponding emoticons.
 
 Create Watson Tone Analyzer in your own account.
 
@@ -165,7 +165,7 @@ Create Watson Tone Analyzer in your own account.
     ibmcloud resource service-instance-create my-tone-analyzer-service tone-analyzer lite us-south -g default
     ```
 
-    > If the previous command errors, it might be due to your resource group name. Try -g Default rather than default
+    > If the previous command errors, it might be due to your resource group name. Try '-g Default' rather than '-g default'.
     
     > See all resource groups by running `ibmcloud resource groups`. If it fails due to the region, try `eu-de` rather than `us-south`.
 
@@ -180,7 +180,7 @@ Create Watson Tone Analyzer in your own account.
     ibmcloud resource service-key tone-analyzer-key
     ``` 
 
-1. Open `istio101/workshop/guestbook/v2/analyzer-deployment.yaml` in an editor:
+1. Open `istio101/workshop/guestbook/v2/analyzer-deployment.yaml` in an editor (nano):
 
    ```
    nano analyzer-deployment.yaml
@@ -189,13 +189,12 @@ Create Watson Tone Analyzer in your own account.
    ![](../README_images/fileeditor2.png)
 
 
-1. Find the env section near the end of the file (use cursor keys to navigate!). Replace YOUR_API_KEY with the **apikey** and YOUR_URL with the **url**, both provided earlier, it looks similar to `https://api.us-south.tone-analyzer.watson.cloud.ibm.com/instances/xxx-xxx-xxx-xxx-xxx`. 
-Save the file (Ctl-o) and close the nano editor (Ctl-x).
+1. Find the env section near the end of the file (use cursor keys to navigate!). Replace YOUR_API_KEY with the **apikey** and YOUR_URL with the **url**, both provided earlier. Save the file (Ctl-o) and close the nano editor (Ctl-x).
 
 
-1.   Deploy the analyzer pods and service, using the `analyzer-deployment.yaml` and `analyzer-service.yaml` files found in the `guestbook/v2` directory. The analyzer service talks to Watson Tone Analyzer to help analyze the tone of a message. Ensure you are still in the `guestbook/v2` directory.
+1.   Deploy the analyzer pods and service, using the `analyzer-deployment.yaml` and `analyzer-service.yaml` files. The analyzer service talks to Watson Tone Analyzer to help analyze the tone of a message. Ensure you are still in the `guestbook/v2` directory.
 
-      ```shell
+      ```
       kubectl apply -f analyzer-deployment.yaml
       kubectl apply -f analyzer-service.yaml
       ```
