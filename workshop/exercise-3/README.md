@@ -30,7 +30,7 @@ The Guestbook app is a sample app for users to leave comments. It consists of a 
     ```
 
 ### Enable the automatic sidecar injection for the default namespace
-In Kubernetes, a sidecar is a utility container in the pod, and its purpose is to support the main container. For Istio to work, Envoy proxies must be deployed as sidecars to each pod of the deployment. There are two ways of injecting the Istio sidecar into a pod: manually using the istioctl CLI tool or automatically using the Istio sidecar injector. In this exercise, we will use the automatic sidecar injection provided by Istio.
+In Kubernetes, a sidecar is a utility container in the pod, and its purpose is to support the main container. For Istio to work, Envoy proxies must be deployed as sidecars to each pod of the deployment. There are two ways of injecting the Istio sidecar into a pod: manually using the istioctl CLI tool or automatically using the Istio sidecar injector. In this exercise, we will use the automatic sidecar injection provided by Istio which is enabled by adding a label to a namespace.
 
 1. Annotate the default namespace to enable automatic sidecar injection:
     
@@ -180,24 +180,18 @@ Create Watson Tone Analyzer in your own account.
     ibmcloud resource service-key tone-analyzer-key
     ``` 
 
-1. Open the web file browser by clicking the Pen icon. 
+1. Open `istio101/workshop/guestbook/v2/analyzer-deployment.yaml` in an editor:
 
-    ![](../README_images/fileeditor.png)
-
-1. Click on the File Explorer icon to see the available files.
-
-    ![](../README_images/file_explorer.png)
-
-1. Navigate to `istio101/workshop/guestbook/v2/analyzer-deployment.yaml`
-
-![](../README_images/fileeditor2.png)
+   ```
+   nano analyzer-deployment.yaml
+   ```
+   
+   ![](../README_images/fileeditor2.png)
 
 
-1. Find the env section near the end of the file. Replace YOUR_API_KEY with the **apikey** and YOUR_URL with the **url**, both provided earlier, it looks similar to `https://api.us-south.tone-analyzer.watson.cloud.ibm.com/instances/xxx-xxx-xxx-xxx-xxx`. 
-Save the file and close the web file browser.
+1. Find the env section near the end of the file (use cursor keys to navigate!). Replace YOUR_API_KEY with the **apikey** and YOUR_URL with the **url**, both provided earlier, it looks similar to `https://api.us-south.tone-analyzer.watson.cloud.ibm.com/instances/xxx-xxx-xxx-xxx-xxx`. 
+Save the file (Ctl-o) and close the nano editor (Ctl-x).
 
-
-Note: You may have trouble editing this file with some browsers, particularly Edge. If you're having trouble, try clicking the name of the file in the top tab, and then moving your cursor and making edits using the arrow keys and keyboard. `ctrl+c` is copy, and `ctrl+v` is paste.
 
 1.   Deploy the analyzer pods and service, using the `analyzer-deployment.yaml` and `analyzer-service.yaml` files found in the `guestbook/v2` directory. The analyzer service talks to Watson Tone Analyzer to help analyze the tone of a message. Ensure you are still in the `guestbook/v2` directory.
 

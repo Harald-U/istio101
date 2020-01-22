@@ -19,7 +19,7 @@ In this section, you will login to your own IBM Cloud account, and then get acce
 
 1. Create your own [IBM Cloud account](https://ibm.biz/BdqcXN)   
 
-1. After the email verification, confirm by logging in to https://cloud.ibm.com.
+1. After the email verification, confirm by logging in to [https://cloud.ibm.com](https://cloud.ibm.com).
 
 1. Go to [Grant Cluster](https://.mybluemix.net/) web page and enter your IBM ID (the email you used to sign up) and the lab key (should be written on the whiteboard) from the instructor
 

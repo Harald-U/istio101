@@ -43,16 +43,16 @@ An Ingress Gateway resource can be created to allow external requests through th
 
 3. Make note of the external IP address that you retrieved in the previous step, as it will be used to access the Guestbook app in later parts of the course. Create an environment variable called $INGRESS_IP with your IP address.
 
-Example:
-```
-export INGRESS_IP=169.6.1.1
-```
+    Example:
+    ```
+    export INGRESS_IP=169.6.1.1
+    ```
 
 ## Connect Istio Ingress Gateway to the IBM Cloud Kubernetes Service NLB Host Name
 
 NLB host names are the DNS host names you can generate for each IBM Cloud Kubernetes deployment exposed with the Network LoadBalancer(NLB) service. These host names come with SSL certificate, the DNS registration, and health checks so you can benefit from them for any deployments that you expose via the NLB on IBM Cloud Kubernetes Service.
 
-You can run the IBM Cloud Kubernetes Service ALB, an API gateway of your choice, an Istio ingress gateway, and an MQTT server in parallel in your IBM Cloud Kubernetes Service cluster. Each one will have its own:
+For example, you can run the IBM Cloud Kubernetes Service ALB, an API gateway of your choice, an Istio ingress gateway, and an MQTT server in parallel in your IBM Cloud Kubernetes Service cluster. Each one will have its own:
 
     1. Publicly available wildcard host name
     2. Wildcard SSL certificate associated with the host name

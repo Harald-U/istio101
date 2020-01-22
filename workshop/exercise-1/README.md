@@ -14,8 +14,9 @@
 
 You must already have an IBM account, with a cluster created or assigned to you as documented in the [previous step](../README.md).
 
-## Connect to your cluster using the lab web shell (Cloud Shell)
-For this lab, a web shell is provided for you with all the necessary tools. Use this web shell to perform the tasks in this lab. 
+## Connect to your cluster using the IBM Cloud Shell 
+
+For this lab, a Cloud Shell is provided for you with all the necessary tools. Use this web-based shell to perform the tasks in this lab. 
 
 1. Using Chrome or Firefox, [**click here to launch Cloud Shell**](https://workshop.shell.cloud.ibm.com/) and `Login` with your IBM Cloud account.
 
