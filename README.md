@@ -1,8 +1,4 @@
-# Meetup: Istio 101
-
-- Date: Wednesday, January 29, 2020
-- Time: 18:00 - 20:00 (6:00 PM to 8:00 PM)
-- Location: WeWork, Stresemannstraße 123, 10963 Berlin
+# Istio 101
 
 ## Managing Microservice Communication with Kubernetes and Istio Service Mesh
 
