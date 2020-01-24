@@ -12,7 +12,7 @@
 
 # Exercise 5 - Expose the service mesh with the Istio Ingress Gateway
 
-**Note:** You will be able to complete this exercise on the Kubernetes clusters provided to you for this workshop. You will **not be able** to do this on a lite Kubernetes cluster on IBM Cloud since the free lite clusters do not have external IP adresses and Network Load Balancers (NLBs) available.
+<!-- **Note:** You will be able to complete this exercise on the Kubernetes clusters provided to you for this workshop. You will **not be able** to do this on a lite Kubernetes cluster on IBM Cloud since the free lite clusters do not have external IP adresses and Network Load Balancers (NLBs) available. -->
 
 The components deployed on the service mesh by default are not exposed outside the cluster. External access to individual services so far has been provided by creating an external load balancer or node port on each service.
 

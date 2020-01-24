@@ -16,7 +16,7 @@ The Guestbook app is a sample app for users to leave comments. It consists of a 
 
 ![](../README_images/istio1.jpg)
 
-### Download the Guestbook app
+<!-- ### Download the Guestbook app
 1. In the web shell, clone the Guestbook app from GitHub into the `workshop` directory.
 
     ```shell
@@ -28,6 +28,7 @@ The Guestbook app is a sample app for users to leave comments. It consists of a 
     ```shell
     cd guestbook/v2
     ```
+-->
 
 ### Enable the automatic sidecar injection for the default namespace
 In Kubernetes, a sidecar is a utility container in the pod, and its purpose is to support the main container. For Istio to work, Envoy proxies must be deployed as sidecars to each pod of the deployment. There are two ways of injecting the Istio sidecar into a pod: manually using the istioctl CLI tool or automatically using the Istio sidecar injector. In this exercise, we will use the automatic sidecar injection provided by Istio which is enabled by adding a label to a namespace.
@@ -106,6 +107,7 @@ The Redis database is a service that you can use to persist the data of your app
 1. Inject the Istio Envoy sidecar into the guestbook pods, and deploy the Guestbook app on to the Kubernetes cluster. Deploy both the v1 and v2 versions of the app:
 
     ```shell
+    cd guestbook/v2
     kubectl apply -f ../v1/guestbook-deployment.yaml
     kubectl apply -f guestbook-deployment.yaml
     ```

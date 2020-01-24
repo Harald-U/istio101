@@ -16,7 +16,7 @@ In this module, you will use the Managed Istio add-on to install Istio on your c
 
 Managed Istio is available as part of IBM Cloud™ Kubernetes Service. The service provides seamless installation of Istio, automatic updates and lifecycle management of control plane components, and integration with platform logging and monitoring tools.
 
-Note: Managed Istio has certain hardware (size) requirements. Those requirments are met by the clusters provided to you for this workshop. It is not possible to use managed Istio on the free Kubernetes clusters on IBM Cloud. You can still install Istio manually on a free cluster by following [these instructions](https://github.com/IBM/cloud-native-starter/blob/master/documentation/IKSDeployment.md#add-istio).  
+<!-- Note: Managed Istio has certain hardware (size) requirements. Those requirments are met by the clusters provided to you for this workshop. It is not possible to use managed Istio on the free Kubernetes clusters on IBM Cloud. You can still install Istio manually on a free cluster by following [these instructions](https://github.com/IBM/cloud-native-starter/blob/master/documentation/IKSDeployment.md#add-istio).  -->
 
 1. Run this commmand to install Managed Istio:
 
