@@ -101,21 +101,21 @@ Kiali is an open-source project that installs as an add-on on top of Istio to vi
 
 1. Create a secret which will be used to set the login credentials for Kiali
 
-    ```
-    cat <<EOF | kubectl apply -f -
-    apiVersion: v1
-    kind: Secret
-    metadata:
-      name: kiali
-      namespace: istio-system
-      labels:
-        app: kiali
-    type: Opaque
-    data:
-      username: "YWRtaW4="
-      passphrase: "YWRtaW4="
-    EOF
-    ```
+```
+cat <<EOF | kubectl apply -f -
+apiVersion: v1
+kind: Secret
+metadata:
+    name: kiali
+    namespace: istio-system
+    labels:
+    app: kiali
+type: Opaque
+data:
+    username: "YWRtaW4="
+    passphrase: "YWRtaW4="
+EOF
+```
 
 1. Establish port forwarding to the Kiali pod from local port 8084.
 

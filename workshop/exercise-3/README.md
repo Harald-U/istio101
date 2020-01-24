@@ -72,15 +72,15 @@ The Redis database is a service that you can use to persist the data of your app
     ```
     Output:
     ```shell
-    NAME           DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
-    redis-master   1         1         1            1           5d
-    redis-slave    2         2         2            2           5d
+    NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+    redis-master   1/1     1            1           26s
+    redis-slave    2/2     2            2           21s
     ```
 
 3. Verify that the Redis services for the master and the slave are created.
 
     ```shell
-    kubectl get svc
+    kubectl get svc | grep redis
     ```
     Output:
     ```shell
@@ -122,7 +122,7 @@ The Redis database is a service that you can use to persist the data of your app
 3. Verify that the service was created.
 
     ```shell
-    kubectl get svc
+    kubectl get svc | grep guestbook
     ```
     Output:
     ```shell
@@ -133,7 +133,7 @@ The Redis database is a service that you can use to persist the data of your app
 4. Verify that the pods are up and running.
 
     ```shell
-    kubectl get pods
+    kubectl get pods | grep guestbook
     ```
     Sample output:
     ```shell

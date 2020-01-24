@@ -54,9 +54,8 @@ In this section, you will login to your own IBM Cloud account, and then get acce
     export KUBECONFIG=
 
     Get the Workshop code:
-    git clone https://github.com/IBM/istio101
-    cd istio101/workshop
-    
+    git clone https://github.com/Harald-U/istio101.git
+    cd istio101/workshop/guestbook/v2
 
     Tone Analyzer (you may need to change istio101/workshop/guestbook/v2/analyzer-deployment.yaml again)
     apikey: 

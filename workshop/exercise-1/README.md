@@ -89,14 +89,14 @@ Learn how to set the context to work with your cluster by using the `kubectl` CL
 
 ## Clone the lab repo
 
-1. From your command line, run:
+From your command line, run:
 
-    ```
-    git clone https://github.com/Harald-U/istio101.git
-    cd istio101/workshop/guestbook/v2
-    ```
+```
+git clone https://github.com/Harald-U/istio101.git
+cd istio101/workshop/guestbook/v2
+```
 
-    This is the working directory for the workshop. You will use the `.yaml` files that are located in the `workshop/plans` directory in the following exercises.
+This is the working directory for the workshop. You will use the `.yaml` files that are located in the `workshop/plans` directory in the following exercises.
 
 ---
 
