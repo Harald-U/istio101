@@ -91,7 +91,7 @@ Learn how to set the context to work with your cluster by using the `kubectl` CL
 
 1. From your command line, run:
 
-    ```shell
+    ```
     git clone https://github.com/Harald-U/istio101.git
     cd istio101/workshop/guestbook/v2
     ```

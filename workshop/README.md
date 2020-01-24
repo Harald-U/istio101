@@ -56,8 +56,7 @@ In this section, you will login to your own IBM Cloud account, and then get acce
     Get the Workshop code:
     git clone https://github.com/IBM/istio101
     cd istio101/workshop
-    git clone -b kubecon2019 https://github.com/IBM/guestbook
-    cd guestbook/v2
+    
 
     Tone Analyzer (you may need to change istio101/workshop/guestbook/v2/analyzer-deployment.yaml again)
     apikey: 
