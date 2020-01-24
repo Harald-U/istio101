@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: analyzer
+  labels:
+    app: analyzer
+spec:
+  selector:
+    matchLabels:
+      app: analyzer
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: analyzer
+    spec:
+      containers:
+      - name: analyzer
+        image: ibmcom/analyzer:v1.1
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        env:
+        - name: VCAP_SERVICES_TONE_ANALYZER_API_KEY
+          value: YOUR_API_KEY
+        - name : VCAP_SERVICES_TONE_ANALYZER_TOKEN_ADDRESS
+          value: "https://iam.bluemix.net/identity/token"
+        - name: VCAP_SERVICES_TONE_ANALYZER_SERVICE_API
+          value: YOUR_URL
+        ports:
+        - containerPort: 5000
+          name: http
