@@ -23,14 +23,6 @@ spec:
   gateways:
     - guestbook-gateway
   http:
-    - match:
-      - uri:
-          prefix: /kiali
-      route:
-      - destination:
-          port:
-            number: 20001
-          host: kiali.istio-system.svc.cluster.local           
     - route:
         - destination:
             host: guestbook

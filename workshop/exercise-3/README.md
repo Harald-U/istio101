@@ -3,10 +3,10 @@
 [Exercise 1 - Accessing your Kubernetes Cluster](../exercise-1/README.md) ## 
 [Exercise 2 - Installing Istio](../exercise-2/README.md) ## 
 **Exercise 3 - Deploy Guestbook with Istio Proxy** ## 
-[Exercise 4 - Telemetry](../exercise-4/README.md) ## 
-[Exercise 5 - Expose the service mesh with the Istio Ingress Gateway](../exercise-5/README.md) ## 
-[Exercise 6 - Traffic Management](../exercise-6/README.md) ## 
-[Exercise 7 - Security](../exercise-7/README.md)
+[Exercise 4 - Expose the service mesh with the Istio Ingress Gateway](exercise-4/README.md) ## 
+[Exercise 5 - Telemetry](exercise-5/README.md) ## 
+[Exercise 6 - Traffic Management](exercise-6/README.md) ## 
+[Exercise 7 - Security](exercise-7/README.md)
 
 ---
 
@@ -204,4 +204,4 @@ Great! Your guestbook app is up and running. In Exercise 4, you'll be able to se
 
 ---
 
-### [Continue to Exercise 4 - Telemetry](../exercise-4/README.md)
+### [Continue to Exercise 4 - Expose the service mesh with the Istio Ingress Gateway](../exercise-4/README.md)
