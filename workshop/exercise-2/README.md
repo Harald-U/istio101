@@ -24,6 +24,20 @@ Managed Istio is available as part of IBM Cloud™ Kubernetes Service. The servi
     ibmcloud ks cluster addon enable istio --cluster $MYCLUSTER
     ```
 
+2. Run this commmand to check the status of the Istio installation:
+
+    ```shell
+    ibmcloud ks cluster addon ls --cluster $MYCLUSTER
+    ```
+
+    Once Istio installed successful, output will look similar to this:
+
+    ```
+    Name    Version   Health State   Health Status  
+    istio   1.4       normal         Addon Ready   
+    ```
+
+    If 'Health State' shows "critical", don't panic, just wait a few minutes!
 
 3. Ensure the Istio pods -- especially `istio-citadel-*`, `istio-ingressgateway-*`, `istio-pilot-*`, and `istio-policy-*` -- are all in **`Running`** state before you continue.
 
