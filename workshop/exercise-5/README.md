@@ -42,7 +42,7 @@ You can read more about how [Istio mixer enables telemetry reporting](https://is
 
     ![](../README_images/guestbook1.png)
 
-1. Generate a small load to the app, replacing guestbook_IP with your own IP.
+1. Generate a small load to the app:
 
     ```shell
     for i in {1..20}; do sleep 0.5; curl http://$NLB_HOSTNAME/; done
@@ -52,7 +52,7 @@ You can read more about how [Istio mixer enables telemetry reporting](https://is
 
 In the previous lab we exposed the Istio Ingressgateway with the help of a Network Load Balancer (NLB) which gave us a URL ($NLB_HOSTNAME) to access the gestbook app. In this section we use the instructions provided on the Istio homepage to [remotely access the telemetry addons](https://istio.io/docs/tasks/observability/gateways/#option-2-insecure-access-http) like Grafana, Prometheus, and Kiali.
 
-#### Grafana
+### Grafana
 
 <!--1. Establish port forwarding from local port 8082 to the Grafana instance:
 
@@ -80,7 +80,9 @@ In the previous lab we exposed the Istio Ingressgateway with the help of a Netwo
     ```
 
 3. Click on Home -> Istio -> Istio Service Dashboard.
-4. Select guestbook in the Service drop down.
+
+4. Select **guestbook.default...** in the Service drop down.
+
 5. In a different tab, visit the guestbook application and refresh the page multiple times to generate some load.
 
     ![](../README_images/grafana.png)
@@ -89,7 +91,7 @@ This Grafana dashboard provides metrics for each workload. Explore the other das
 
 <!-- 6. Use Ctrl-C in the cloudshell to exit the port-foward when you are done. -->
 
-#### Prometheus
+### Prometheus
 
 <!-- 1. Establish port forwarding from local port 8083 to the Prometheus pod.
 
@@ -103,7 +105,7 @@ This Grafana dashboard provides metrics for each workload. Explore the other das
 1. Make sure you are in directory '/istio101/workshop/plans', then expose Prometheus:
 
     ```
-    kubectl apply -f grafana-prometheus.yaml
+    kubectl apply -f prometheus-gateway.yaml
     ```
 
 2. In your browser open the $NLB_HOSTNAME URL but add port 15030, e.g.:
@@ -122,7 +124,7 @@ This Grafana dashboard provides metrics for each workload. Explore the other das
 
 <!-- 5. Use Ctrl-C to exit the port-foward when you are done. -->
 
-#### Kiali
+### Kiali
 
 Kiali is an open-source project that installs as an add-on on top of Istio to visualize your service mesh. It provides deeper insight into how your microservices interact with one another, and provides features such as circuit breakers and request rates for your services.
 
@@ -145,7 +147,7 @@ Kiali is an open-source project that installs as an add-on on top of Istio to vi
 2. Now expose Kiali:
 
     ```
-    kubectl apply -f grafana-kiali.yaml
+    kubectl apply -f kiali-gateway.yaml
     ```
 
 2. In your browser open the $NLB_HOSTNAME URL but add port 15029, e.g.:
@@ -164,6 +166,8 @@ Kiali is an open-source project that installs as an add-on on top of Istio to vi
 Kiali has a number of views to help you visualize your services. Click through the various tabs to explore the service graph, and the various views for workloads, applications and services.
 
 ![](../README_images/kiali.png) 
+
+Keep the Kiali dashboard open for the next lab.
 
 ---
 

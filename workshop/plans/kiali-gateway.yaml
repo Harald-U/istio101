@@ -9,15 +9,10 @@ spec:
   servers:
   - port:
       number: 15029
-      name: https-kiali
-      protocol: HTTPS
-    tls:
-      mode: SIMPLE
-      serverCertificate: sds
-      privateKey: sds
-      credentialName: telemetry-gw-cert
+      name: http-kiali
+      protocol: HTTP
     hosts:
-    - "$TELEMETRY_DOMAIN"
+    - "*"
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
@@ -26,7 +21,7 @@ metadata:
   namespace: istio-system
 spec:
   hosts:
-  - "$TELEMETRY_DOMAIN"
+  - "*"
   gateways:
   - kiali-gateway
   http:

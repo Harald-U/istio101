@@ -43,7 +43,7 @@ In this section, you will login to your own IBM Cloud account, and then get acce
 
 1. Launch the **Kubernetes Dashboard** and have a look around! You can come back to this dashboard throughout your lab.
 
-10. On your own workstation/laptop/notebook create a text file (call it 'environment.txt' if you need an idea for a name) and save the cluster name ('export MYCLUSTER=...'). Keep this file open throughout the lab to store other important values and parameters.
+10. On your own workstation/laptop/notebook create a text file (call it 'environment.txt' if you need an idea for a name) and save the cluster name ('export MYCLUSTER=...'). Keep this **environment file** open throughout the lab to store or access important values and parameters.
 
     You can use this as a template for your own `environment.txt`:
 
