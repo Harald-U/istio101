@@ -21,15 +21,15 @@ In this section, you will login to your own IBM Cloud account, and then get acce
 
 1. After the email verification, confirm by logging in to [https://cloud.ibm.com](https://cloud.ibm.com).
 
-1. Go to [Grant Cluster](https://.mybluemix.net/) web page and enter your IBM ID (the email you used to sign up) and the lab key (should be written on the whiteboard) from the instructor
+1. Go to [IBM Cloud Lab](https://istio1010bin.mybluemix.net/) web page and enter your IBM ID (the email you used to sign up) and the lab key (should be written on the whiteboard) from the instructor, accept the t&c's
 
     ![](README_images/get-clusters-no-region.png)
 
-1. You will be added to the IBM Lab account and granted access to a cluster. Note the name of your cluster. It will be something like: `myclusterXXX`.
+1. You will be added to the IBM Lab account and granted access to a cluster. Note the name of your cluster. It will be something like: `istio1010binXX`.
 
 1. Refresh your [IBM Cloud Dashboard](https://cloud.ibm.com)
 
-1. Switch to the **1835659-IBM** account by clicking on the account selection drop down in the top nav bar.
+1. Switch to the **1840867-IBM** account by clicking on the account selection drop down in the top nav bar.
 
    ![](README_images/ibmaccount.png)
 
