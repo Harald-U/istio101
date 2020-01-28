@@ -19,7 +19,7 @@ We all know that microservice architecture is the perfect fit for cloud native a
 
 Istio's tracing and metrics features are designed to provide broad and granular insight into the health of all services. Istio's role as a service mesh makes it the ideal data source for observability information, particularly in a microservices environment. As requests pass through multiple services, identifying performance bottlenecks becomes increasingly difficult using traditional debugging techniques. Distributed tracing provides a holistic view of requests transiting through multiple services, allowing for immediate identification of latency issues. With Istio, distributed tracing comes by default. This will expose latency, retry, and failure information for each hop in a request.
 
-You can read more about how [Istio mixer enables telemetry reporting](https://istio.io/docs/concepts/policy-and-control/mixer.html).
+You can read more about how [Istio mixer enables telemetry reporting](https://istio.io/docs/tasks/observability/gateways/#option-2-insecure-access-http).
 
 ### Configure Istio to receive telemetry data
 
