@@ -1,14 +1,5 @@
 
->**Getting Started - Prepare Your Environment** ## 
-[Exercise 1 - Accessing your Kubernetes Cluster](exercise-1/README.md) ##
-[Exercise 2 - Installing Istio](exercise-2/README.md) ## 
-[Exercise 3 - Deploy Guestbook with Istio Proxy](exercise-3/README.md) ## 
-[Exercise 4 - Expose the service mesh with the Istio Ingress Gateway](exercise-4/README.md) ## 
-[Exercise 5 - Telemetry](exercise-5/README.md) ## 
-[Exercise 6 - Traffic Management](exercise-6/README.md) ## 
-[Exercise 7 - Security](exercise-7/README.md)
 
----
 
 # Getting Started
 
@@ -63,5 +54,17 @@ In this section, you will login to your own IBM Cloud account, and then get acce
     ```
 
 
-### [Continue to Exercise 1](exercise-1/README.md)
+11. Now continue with the exercises. You need to complete exercise 1 through 4 in sequence: 
+
+    - [Exercise 1 - Accessing your Kubernetes Cluster](exercise-1/README.md) 
+    - [Exercise 2 - Installing Istio](exercise-2/README.md)
+    - [Exercise 3 - Deploy Guestbook with Istio Proxy](exercise-3/README.md)
+    - [Exercise 4 - Expose the service mesh with the Istio Ingress Gateway](exercise-4/README.md)
+
+    Exercises 5 through 7 can be done in any order:
+
+    - [Exercise 5 - Telemetry](exercise-5/README.md) 
+    - [Exercise 6 - Traffic Management](exercise-6/README.md) 
+    - [Exercise 7 - Security](exercise-7/README.md)
+
 
