@@ -32,13 +32,17 @@ You can read more about how [Istio mixer enables telemetry reporting](https://is
 
 3. Obtain the guestbook endpoint to access the guestbook.
 
-    The endpoint is the NLB host name ($NLB_HOSTNAME) from the previous lab. This is the command to list the address, watch out for the correct one, there should be two addresses:
+    The endpoint is the NLB host name ($NLB_HOSTNAME) from the previous lab. This is the command to list the address, watch out for the correct one, there should be two addresses, it is most likely the second with the Health Monitor enabled:
 
     ```shell
     ibmcloud ks nlb-dnss --cluster $MYCLUSTER
     ```
 
-    Go to this URL in the browser to try out your guestbook. This service will route you to either v1 or v2, at random. If you wish to see a different version, you'll need to do a hard refresh (`cmd + shift + r` on a mac, or `ctrl + f5` on a PC). Alternatively, you can `curl` the address.
+    Go to this URL in the browser to try out your guestbook. This service will route you to either v1 or v2, at random. If you wish to see a different version, you'll need to do a hard refresh (`cmd + shift + r` on a mac, or `ctrl + f5` on a PC). 
+    
+    Enter some text in V1 (blue) and some more text in V2 (yellow). Notice that V2 adds tone information to your input. 
+    
+    Alternatively, you can `curl` the address.
 
     ![](../README_images/guestbook1.png)
 
@@ -50,7 +54,7 @@ You can read more about how [Istio mixer enables telemetry reporting](https://is
 
 ## View guestbook telemetry data
 
-In the previous lab we exposed the Istio Ingressgateway with the help of a Network Load Balancer (NLB) which gave us a URL ($NLB_HOSTNAME) to access the gestbook app. In this section we use the instructions provided on the Istio homepage to [remotely access the telemetry addons](https://istio.io/docs/tasks/observability/gateways/#option-2-insecure-access-http) like Grafana, Prometheus, and Kiali.
+In the previous lab we exposed the Istio Ingressgateway with the help of a Network Load Balancer (NLB) which gave us a URL ($NLB_HOSTNAME) to access the Guestbook app. In this section we use the instructions provided on the Istio homepage to [remotely access the telemetry addons](https://istio.io/docs/tasks/observability/gateways/#option-2-insecure-access-http) like Grafana, Prometheus, and Kiali.
 
 ### Grafana
 
@@ -76,7 +80,7 @@ In the previous lab we exposed the Istio Ingressgateway with the help of a Netwo
 2. In your browser open the $NLB_HOSTNAME URL but add port 15031, e.g.:
 
     ```
-    http://harald-uebele-ist-985933-5290c8c8e5797924dc1ad5d1b85b37c0-0001.eu-de.containers.appdomain.cloud:15031
+    http://istio1010bin09-0e3e0ef4c9c6d831e8aa6fe01f33bfc4-0001.eu-gb.containers.appdomain.cloud:15031
     ```
 
 3. Click on Home -> Istio -> Istio Service Dashboard.
@@ -111,7 +115,7 @@ This Grafana dashboard provides metrics for each workload. Explore the other das
 2. In your browser open the $NLB_HOSTNAME URL but add port 15030, e.g.:
 
     ```
-    http://harald-uebele-ist-985933-5290c8c8e5797924dc1ad5d1b85b37c0-0001.eu-de.containers.appdomain.cloud:15030
+    http://istio1010bin09-0e3e0ef4c9c6d831e8aa6fe01f33bfc4-0001.eu-gb.containers.appdomain.cloud:15030
     ```
 
 3. In the “Expression” input box, enter: `istio_request_bytes_count`. Click Execute.
@@ -153,9 +157,10 @@ Kiali is an open-source project that installs as an add-on on top of Istio to vi
 2. In your browser open the $NLB_HOSTNAME URL but add port 15029, e.g.:
 
     ```
-    http://harald-uebele-ist-985933-5290c8c8e5797924dc1ad5d1b85b37c0-0001.eu-de.containers.appdomain.cloud:15029
+    http://istio1010bin09-0e3e0ef4c9c6d831e8aa6fe01f33bfc4-0001.eu-gb.containers.appdomain.cloud:15029
     ```
 
+    The Login dialog may tell you that the Kiali secret is missing, but we just created it. 
 
 2. Login with the following username/password: `admin/admin`.
 

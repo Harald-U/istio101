@@ -166,6 +166,7 @@ Output:
     ```shell
     istioctl x describe pod guestbook-v2-f9f597d8d-zbhkt
     ```
+**Please note:** istioctl seems to no longer support this experimental (x) command and the Istio documentation offers no replacement. 
 
 3. You should see something like this:
 
@@ -242,7 +243,7 @@ Istio support Role Based Access Control(RBAC) for HTTP services in the service m
     authorizationpolicy.security.istio.io/analyzeraccess created
     ```
     
-4.  Visit the Guestbook app from your favorite browser and validate that Guestbook V1 continues to work while Guestbook V2 will not run correctly. For every new message you write on the Guestbook v2 app, you will get a message such as "Error - unable to detect Tone from the Analyzer service".  It can take up to 15 seconds for the change to propogate to the envoy sidecar(s) so you may not see the error right away.
+4.  Visit the Guestbook app from your favorite browser and validate that Guestbook v2 does not run correctly by entering some message into the guestbook. For every new message you write on the Guestbook v2 app, you will get a message such as "Error - unable to detect Tone from the Analyzer service".  It can take up to 15 seconds for the change to propogate to the envoy sidecar(s) so you may not see the error right away.
 
 5. Configure the Analyzer service to only allow access from the Guestbook service using the added `rules` section:
 

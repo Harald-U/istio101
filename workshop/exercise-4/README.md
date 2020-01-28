@@ -67,7 +67,7 @@ Let's leverage this feature with Istio ingress gateway:
     ibmcloud login
     ```
 
-1. Choose IBM as the Account (NOT your own)
+1. From the account list, choose IBM as the Account (NOT your own)
 
 1. Create the NLB host with the Istio ingress gateway's public IP address:
 
@@ -83,20 +83,19 @@ Let's leverage this feature with Istio ingress gateway:
 
     Example output:
     ```
-   Retrieving host names, certificates, IPs, and health check monitors for network load balancer (NLB) pods in cluster <cluster_name>...
-    Hostname                                                                                          IP        
-     Health Monitor   H.Monitor Status   
-     harald-uebele-ist-985933-5290c8c8e5797924dc1ad5d1b85b37c0-0000.eu-de.containers.appdomain.cloud   149.81.64.35   None             N/A   
-     harald-uebele-ist-985933-5290c8c8e5797924dc1ad5d1b85b37c0-0001.eu-de.containers.appdomain.cloud   149.81.64.34   None             N/A   
+   
+    Hostname                                                                                IP             Health Monitor   H.Monitor Status   
+    istio1010bin09-0e3e0ef4c9c6d831e8aa6fe01f33bfc4-0000.eu-gb.containers.appdomain.cloud   141.125.94.2   None             created           istio1010bin09-0e3e0ef4c9c6d831e8aa6fe01f33bfc4-0000   default   
+    istio1010bin09-0e3e0ef4c9c6d831e8aa6fe01f33bfc4-0001.eu-gb.containers.appdomain.cloud   141.125.94.6   None             pending           -                                                      default   
     ```
     
-    **Note:** This list may contain two NLB host names. The first one would be the host name of the Kubernetes ingress, so watch for the correct IP address! (`echo $INGRESS_IP`)
+    **Note:** This list will contain two NLB host names. The first one would be the host name of the Kubernetes ingress, so watch for the correct IP address! (`echo $INGRESS_IP`)
 
 1. Make note of the NLB host name, as it will be used to access your Guestbook app in later parts of the course. Create an environment variable for it and test using curl or visit in your browser.
 
     Example:
     ```
-    export NLB_HOSTNAME=harald-uebele-ist-985933-5290c8c8e5797924dc1ad5d1b85b37c0-0001.eu-de.containers.appdomain.cloud
+    export NLB_HOSTNAME=istio1010bin09-0e3e0ef4c9c6d831e8aa6fe01f33bfc4-0001.eu-gb.containers.appdomain.cloud
     ```
     ```
     curl $NLB_HOSTNAME
@@ -118,13 +117,14 @@ Let's leverage this feature with Istio ingress gateway:
     
     Example output:
     ```
-        Retrieving health check monitor statuses for NLB pods...
-    OK
-    Hostname                                                                             IP              Health Monitor   H.Monitor Status   
-    mycluster-85f044fc29ce613c264409c04a76c95d-0001.us-east.containers.appdomain.cloud   169.1.1.1   Enabled          Healthy
+    
+    Hostname                                                                                IP          Health Monitor   H.Monitor Status   
+    istio1010bin09-0e3e0ef4c9c6d831e8aa6fe01f33bfc4-0001.eu-gb.containers.appdomain.cloud   169.1.1.1   Enabled          Healthy
     ```
 
 Congratulations! You extended the base Ingress features by providing a DNS entry to the Istio service.
+
+You can now access the Guestbook app using the (somewhat complicated) URL of the NLB_HOSTNAME. In real life you would now map this URL to your own website URL.
 
 ---
 

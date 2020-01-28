@@ -21,7 +21,6 @@ After you complete this workshop, you'll be able to:
 - Set up the Istio Ingress Gateway
 - Perform simple traffic management, such as A/B tests and canary deployments
 - Secure your service mesh
-- Enforce policies for your microservices
 
 
 ## >> [Get started](workshop/README.md)

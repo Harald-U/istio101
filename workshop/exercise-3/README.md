@@ -113,24 +113,7 @@ The Redis database is a service that you can use to persist the data of your app
 
     These commands deploy the Guestbook app on to the Kubernetes cluster. Since we enabled automation sidecar injection, these pods will also include an Envoy sidecar as they are started in the cluster. Here we have two versions of deployments, a new version (`v2`) in the current directory, and a previous version (`v1`) in a sibling directory. They will be used in future sections to showcase the Istio traffic routing capabilities.
 
-2. Create the guestbook service.
-
-    ```shell
-    kubectl create -f guestbook-service.yaml
-    ```
-
-3. Verify that the service was created.
-
-    ```shell
-    kubectl get svc | grep guestbook
-    ```
-    Output:
-    ```shell
-    NAME           TYPE           CLUSTER-IP      EXTERNAL-IP     PORT(S)        AGE
-    guestbook      LoadBalancer   172.21.36.181   169.61.37.140   80:32149/TCP   5d
-    ```
-
-4. Verify that the pods are up and running.
+1. Verify that the pods are up and running.
 
     ```shell
     kubectl get pods | grep guestbook
@@ -144,19 +127,40 @@ The Redis database is a service that you can use to persist the data of your app
 
     Note that each guestbook pod has 2 containers in it. One is the guestbook container, and the other is the Envoy proxy sidecar.
 
+1. Create the guestbook service.
+
+    ```shell
+    kubectl create -f guestbook-service.yaml
+    ```
+
+1. Verify that the service was created.
+
+    ```shell
+    kubectl get svc 
+    ```
+    Output:
+    ```shell
+    NAME           TYPE           CLUSTER-IP       EXTERNAL-IP    PORT(S)        AGE
+    guestbook      LoadBalancer   172.21.1.122     141.125.94.3   80:31710/TCP   93s
+    kubernetes     ClusterIP      172.21.0.1       <none>         443/TCP        7h6m
+    redis-master   ClusterIP      172.21.210.97    <none>         6379/TCP       2m46s
+    redis-slave    ClusterIP      172.21.186.161   <none>         6379/TCP       2m41s
+    ```
+
+1. Open the EXTERNAL-IP of the guestbook service in your browser. You should see the Guestbook app.
 
 ### Use Watson Tone Analyzer
 Watson Tone Analyzer detects the tone from the words that users enter into the Guestbook app (version 2). The tone is converted to the corresponding emoticons.
 
 Create Watson Tone Analyzer in your own account.
 
-1. Switch to your own account by logging in again.
+1. Switch to **your own account** by logging in again.
 
     ```shell
     ibmcloud login
     ```
 
-1. Choose your own account (NOT IBM).
+1. From the account list, choose your own account (not the IBM account)!
 
 1. If prompted to choose a region, select us-south.
 
@@ -166,7 +170,7 @@ Create Watson Tone Analyzer in your own account.
     ibmcloud resource service-instance-create my-tone-analyzer-service tone-analyzer lite us-south -g default
     ```
 
-    > If the previous command errors, it might be due to your resource group name. Try '-g Default' rather than '-g default'.
+    > If the previous command errors ("No resource group found"), try '-g Default' rather than '-g default'.
     
     > See all resource groups by running `ibmcloud resource groups`. If it fails due to the region, try `eu-de` rather than `us-south`.
 
@@ -181,7 +185,7 @@ Create Watson Tone Analyzer in your own account.
     ibmcloud resource service-key tone-analyzer-key
     ``` 
 
-1. Open `istio101/workshop/guestbook/v2/analyzer-deployment.yaml` in an editor (nano):
+1. Open `istio101/workshop/guestbook/v2/analyzer-deployment.yaml` in an editor (nano or vi):
 
    ```
    nano analyzer-deployment.yaml
@@ -190,7 +194,7 @@ Create Watson Tone Analyzer in your own account.
    ![](../README_images/fileeditor2.png)
 
 
-1. Find the env section near the end of the file (use cursor keys to navigate!). Replace YOUR_API_KEY with the **apikey** and YOUR_URL with the **url**, both provided earlier. Save the file (Ctl-o) and close the nano editor (Ctl-x).
+1. Find the env section near the end of the file (use cursor keys to navigate!). Replace YOUR_API_KEY with the **apikey** and YOUR_URL with the **url**, both provided earlier. With nano, save the file (Ctrl-o) and close the editor (Ctrl-x).
 
 
 1.   Deploy the analyzer pods and service, using the `analyzer-deployment.yaml` and `analyzer-service.yaml` files. The analyzer service talks to Watson Tone Analyzer to help analyze the tone of a message. Ensure you are still in the `guestbook/v2` directory.
@@ -200,7 +204,7 @@ Create Watson Tone Analyzer in your own account.
       kubectl apply -f analyzer-service.yaml
       ```
 
-Great! Your guestbook app is up and running. In Exercise 4, you'll be able to see the app in action by directly accessing the service endpoint. You'll also be able to view Telemetry data for the app.
+Great! Your guestbook app is up and running. In Exercise 4, you'll be able to see the app in action.
 
 ---
 

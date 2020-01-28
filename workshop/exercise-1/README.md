@@ -18,12 +18,12 @@ You must already have an IBM account, with a cluster created or assigned to you 
 
 For this lab we use the new IBM Cloud Shell (currently in beta) which provides all the necessary tools. Use this web-based shell to perform the tasks in this lab. 
 
-1. Using Chrome or Firefox, go to the IBM Cloud dashboard, make sure the IBM account is selected, and click on the termianl icon in the menu bar.
+1. Using Chrome or Firefox, go to the IBM Cloud dashboard, make sure the IBM account is selected, and click on the terminal icon in the menu bar.
 
    ![](../README_images/cloudshell.png)
    
 
-**Note:** IBM Cloud Shell has limits on both continuous and weekly usage. You can use Cloud Shell for up to 4 hours continuously and up to 30 hours in a week. Your sessions close when you reach these limits, and any files or data in your workspace are removed. That is why at certain points throughout this lab we tell you to save them in the external environment.txt file (created at the end of the Getting Started) so that you can easily recreate your environment.
+**Note:** IBM Cloud Shell has limits on both continuous and weekly usage. You can use Cloud Shell for up to 4 hours continuously and up to 30 hours in a week. Your sessions close when you reach these limits, and any files or data in your workspace are removed. That is why at certain points throughout this lab we tell you to save some settings in the external environment.txt file (created at the end of the Getting Started) so that you can easily recreate your environment.
 
 Use the IBM Cloud Shell to continue with the labs.
 
@@ -54,7 +54,7 @@ Learn how to set the context to work with your cluster by using the `kubectl` CL
     ```
 
     c. *Copy and paste the output export command* from the output of previous step and save it in your environment file, too. This will set the `KUBECONFIG` environment variable and configure your `kubectl` CLI to run commands against your cluster. Example:
-    `export KUBECONFIG=/Users...`
+    `export KUBECONFIG=/tmp/ic/cloudshell-f64391c4-b01c-4537-...yml`
 
 2.  Get basic information about your cluster and its worker nodes. This information can help you manage your cluster and troubleshoot issues.
 
@@ -94,8 +94,8 @@ git clone https://github.com/Harald-U/istio101.git
 cd istio101/workshop/guestbook/v2
 ```
 
-This is the working directory for the workshop. You will use the `.yaml` files that are located in the `workshop/plans` directory in the following exercises.
+This is the working directory for the workshop. 
 
 ---
 
-### [Continue to Exercise 2 - Installing Istio](../exercise-2/README.md)
+### [Continue with Exercise 2 - Installing Istio](../exercise-2/README.md)
